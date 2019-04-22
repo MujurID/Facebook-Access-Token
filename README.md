@@ -5,7 +5,7 @@ Generating a full permission (Android | iPhone) Facebook Access Token
 ## How to use
 
 ```
-git clone https://github.com/locmai0808/Facebook-Access-Token.git
+git clone https://github.com/monokaijs/Facebook-Access-Token.git
 cd Facebook-Access-Token
 npm install
 npm start
