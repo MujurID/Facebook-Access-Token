@@ -4,7 +4,10 @@ $('#getToken').click(() => {
   fetch(`http://localhost:5000/auth?id=${id}&pass=${encodeURIComponent(pw)}`)
     .then(e => e.json())
     .then(e => {
-      let res = e.loc || e.error;
-      $('#result').text(res);
+		var cookies = "";
+		e.session_cookies.forEach(s => {
+			cookies += s.name + "=" + s.value + ";";
+		});
+		$('#result').html(e.access_token + "<br/>Cookies: " + cookies);
     });
 });
